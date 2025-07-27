@@ -14,9 +14,9 @@ git config --global user.email "$gitUserEmail"
 git add .
 
 # Commit changes
-$commitMessage = Read-Host -Prompt "Enter commit message (default: 'Fix routing and GitHub Pages deployment')"
+$commitMessage = Read-Host -Prompt "Enter commit message (default: 'Fix GitHub Pages deployment with .nojekyll')"
 if (-not $commitMessage) {
-    $commitMessage = "Fix routing and GitHub Pages deployment"
+    $commitMessage = "Fix GitHub Pages deployment with .nojekyll"
 }
 git commit -m "$commitMessage"
 
@@ -33,4 +33,5 @@ git push -u origin main
 
 Write-Host "Done! Check your GitHub repository for the changes."
 Write-Host "GitHub Pages should automatically deploy from the gh-pages branch."
+Write-Host "It may take a few minutes for the changes to take effect."
 Pause
