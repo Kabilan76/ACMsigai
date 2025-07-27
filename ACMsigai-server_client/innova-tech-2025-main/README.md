@@ -2,9 +2,9 @@
 
 ## Project info
 
-**Live Demo**: https://sasit622.github.io/ACMsigai/
+**Live Demo**: https://kabilan76.github.io/ACMsigai/
 
-**GitHub Repository**: https://github.com/yourusername/ACMsigai
+**GitHub Repository**: https://github.com/Kabilan76/ACMsigai
 
 ## How can I edit this code?
 
@@ -48,6 +48,43 @@ npm run dev
 
 - Navigate to the main page of your repository.
 - Click on the "Code" button (green button) near the top right.
+
+## Deploying to GitHub Pages
+
+This project is configured to deploy to GitHub Pages automatically. Here's how it works:
+
+### Automatic Deployment (Recommended)
+
+Whenever you push changes to the `main` branch, a GitHub Actions workflow will automatically:
+1. Build the project
+2. Deploy it to the `gh-pages` branch
+3. GitHub Pages will serve the content from this branch
+
+### Manual Deployment
+
+If you need to deploy manually:
+
+```sh
+# Install dependencies if you haven't already
+npm install
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+### Troubleshooting Deployment
+
+If you encounter issues with deployment:
+
+1. Check that the `homepage` field in `package.json` matches your GitHub Pages URL
+2. Ensure the `base` path in `vite.config.ts` matches your repository name
+3. Verify that the GitHub Pages source is set to the `gh-pages` branch in your repository settings
+
+You can also run the included PowerShell script to push changes to GitHub:
+
+```sh
+./push_to_github.ps1
+```
 - Select the "Codespaces" tab.
 - Click on "New codespace" to launch a new Codespace environment.
 
